@@ -1,0 +1,26 @@
+<div class="single" *ngIf="state$ | async as post;">
+    <div id="fh5co-title-box" style="background-image: url(#); background-position: 50% 90.5px;" data-stellar-background-ratio="0.5">
+        <div class="overlay"></div>
+        <div class="page-title">
+            <img src="../../assets/images/person_1.jpg" alt="">
+            <span>{{post.publishedAt | date:'medium'}}</span>
+            <h2>{{post.title}}</h2>
+        </div>
+    </div>
+    <div id="fh5co-single-content" class="container-fluid pb-4 pt-4 paddding">
+        <div class="container paddding">
+            <div class="row mx-0">
+                <div class="col-md-8 animate-box" data-animate-effect="fadeInLeft">
+                    {{post.content}}
+                </div>
+                <div class="col-md-3 animate-box" data-animate-effect="fadeInRight">
+                    <app-tags></app-tags>
+                    <app-most-popular></app-most-popular>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <app-trending></app-trending>
+</div>
+

@@ -1,0 +1,4 @@
+<app-last-read *ngIf="auth.user$ | async as user;"></app-last-read>
+<app-trending></app-trending>
+<app-playlist *ngIf="auth.user$ | async as user;"></app-playlist>
+<app-recommended></app-recommended>
