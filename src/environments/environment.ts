@@ -15,7 +15,7 @@ export const environment = {
     measurementId: "G-JZ55PGYD7V"
   },
   newsConfig: {
-    API_KEY: "54bde0a5ff284a1a8373d629abadae54"
+    API_KEY: "wUseRobvfbOW89F25NDSbkeHW7sxTOuiDYc5ZzxVA6v1rzCJ"
   }
 };
 

@@ -34,16 +34,21 @@ export class RecommendedComponent implements OnInit {
 
   getLastRead(){
     this.config.getRecommend().subscribe(data => {
-      this.posts = data.articles;
+      this.posts = data.news.slice(0,5);
       console.log(this.posts);
     })
   }
 
   getTagPosts(tag){
     this.config.getNewsTags(tag).subscribe(data => {
-      this.posts = data.articles;
+      this.posts = data.news.slice(0,5);
       console.log(this.posts);
     })
+  }
+
+  goToLink(url){
+    window.open(url, "myWindow", 'width=800,height=600');
+    window.close();
   }
 
 }

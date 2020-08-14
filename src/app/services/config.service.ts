@@ -14,7 +14,7 @@ export class ConfigService {
 
   config = configuration;
 
-  URL = "https://newsapi.org/v2/";
+  URL = "https://api.currentsapi.services/v1/";
   API_KEY = environment.newsConfig.API_KEY;
 
   constructor(private httpClient: HttpClient) { }
@@ -24,15 +24,15 @@ export class ConfigService {
   }
 
   getTrending(){
-    return this.httpClient.get<{status:String, totalResults: Number, articles: []}>(this.URL+"top-headlines?country=in&apiKey="+this.API_KEY)
+    return this.httpClient.get<{status:String,  news: []}>(this.URL+"latest-news?apiKey="+this.API_KEY)
   }
 
   getRecommend(){
-    return this.httpClient.get<{status:String, totalResults: Number, articles: []}>(this.URL+"everything?q=covid&pageSize=5&apiKey="+this.API_KEY)
+    return this.httpClient.get<{status:String, news: []}>(this.URL+"search?keywords=covid&apiKey="+this.API_KEY)
   }
 
   getNewsTags(tag){
-    return this.httpClient.get<{status:String, totalResults: Number, articles: []}>(this.URL+"everything?q="+tag+"&pageSize=5&apiKey="+this.API_KEY)
+    return this.httpClient.get<{status:String, news: []}>(this.URL+"search?keywords="+tag+"&apiKey="+this.API_KEY)
   }
   
 

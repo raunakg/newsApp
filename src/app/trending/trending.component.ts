@@ -40,10 +40,15 @@ export class TrendingComponent implements OnInit {
 
   ngOnInit(): void {
     this.config.getTrending().subscribe(data => {
-      this.posts = data.articles;
+      this.posts = data.news.slice(10);
       console.log(this.posts);
     })
     
+  }
+
+  goToLink(url){
+    window.open(url, "myWindow", 'width=800,height=600');
+    window.close();
   }
 
 }
