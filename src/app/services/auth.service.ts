@@ -15,6 +15,7 @@ import { User } from '../models/user'
 export class AuthService {
 
   user$: Observable<User>;
+  authState: any = null;
 
   constructor(
     private afAuth: AngularFireAuth,
@@ -46,7 +47,10 @@ export class AuthService {
    }
 
    private updateUserData(user){
+ 
      const userRef: AngularFirestoreDocument<User> = this.afs.doc(`users/${user.uid}`);
+
+
 
      const data = {
        uid: user.uid,
@@ -57,4 +61,12 @@ export class AuthService {
 
      return userRef.set(data, {merge: true});
    }
+
+   get isAuthenticated(): boolean {
+    return this.authState !== null;
+}
+
+   get currentUserId(): string {
+    return this.isAuthenticated ? this.authState.uid : null;
+  }
 }

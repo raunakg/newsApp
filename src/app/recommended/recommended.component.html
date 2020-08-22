@@ -13,7 +13,7 @@
                         </div>
                     </div>
                     <div class="col-md-7">
-                        <a [href]=post.url class="fh5co_magna py-2"> {{post.title}} </a> <a [href]=post.url class="fh5co_mini_time py-3"> {{post.author}} -
+                        <a href="javascript:void(0);" (click)="goToLink(post.url)" class="fh5co_magna py-2"> {{post.title}} </a> <a href="javascript:void(0);" (click)="goToLink(post.url)" class="fh5co_mini_time py-3"> {{post.author}} -
                             {{post.publishedAt | date:'medium'}}  </a>
                         <div class="fh5co_consectetur">{{post.content}}
                         </div>

@@ -46,4 +46,9 @@ export class TrendingComponent implements OnInit {
     
   }
 
+  goToLink(url){
+    window.open(url, "myWindow", 'width=800,height=600');
+    window.close();
+  }
+
 }

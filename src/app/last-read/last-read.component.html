@@ -6,7 +6,7 @@
                 <div class="fh5co_suceefh5co_height_position_absolute_font">
                     <div class=""><a href="#" class="color_fff"> <i class="fa fa-clock-o"></i>&nbsp;&nbsp;{{posts[0].publishedAt | date:'medium'}}
                     </a></div>
-                    <div class=""><a [href]=posts[0].url target="_blank" class="fh5co_good_font"> {{posts[0].title}} </a></div>
+                    <div class=""><a href="javascript:void(0);" (click)="goToLink(posts[0].url)"   class="fh5co_good_font"> {{posts[0].title}} </a></div>
                 </div>
             </div>
         </div>
@@ -17,7 +17,7 @@
                         <div class="fh5co_suceefh5co_height_position_absolute"></div>
                         <div class="fh5co_suceefh5co_height_position_absolute_font_2">
                             <div class=""><a href="#" class="color_fff"> <i class="fa fa-clock-o"></i>&nbsp;&nbsp;{{post.publishedAt | date:'medium'}} </a></div>
-                            <div class=""><a [href]=post.url target="_blank" class="fh5co_good_font_2" > {{post.title}} </a></div>
+                            <div class=""><a href="javascript:void(0);" (click)="goToLink(post.url)" class="fh5co_good_font_2" > {{post.title}} </a></div>
                         </div>
                     </div>
                 </div>
