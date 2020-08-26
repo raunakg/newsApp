@@ -30,7 +30,7 @@ export class NavigationComponent implements OnInit {
         
         this.config.updateKeywords(this.user);
 
-      }else if(!this.user.tags.includes(keywords)){
+      }else {
         this.user.tags.push(keywords);
         this.config.updateKeywords(this.user);
       }
