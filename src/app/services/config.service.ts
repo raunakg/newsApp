@@ -6,6 +6,7 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { AngularFirestore, AngularFirestoreDocument } from '@angular/fire/firestore';
 import { AuthService } from './auth.service';
+import { configuration1 } from '../myfile1';
 
 import { User } from '../models/user'
 
@@ -20,6 +21,7 @@ export class ConfigService {
   
 
   config = configuration;
+  myfile=configuration1
 
   URL = "https://newsapi.org/v2/";
   API_KEY = environment.newsConfig.API_KEY;
@@ -29,6 +31,7 @@ export class ConfigService {
   }
   
   getConfig() {
+    console.log(configuration1.tags)
     return this.config;
   }
 

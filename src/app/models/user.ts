@@ -4,5 +4,7 @@ export interface User {
     photoURL?: string;
     displayName?: string;
     tags?: Array<string>;
+    postUrl?: Array<string>;
     recommendedtags?: Array<string>;
+
 }

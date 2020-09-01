@@ -1,0 +1,1 @@
+export const configuration1={'tags': ['covid', 'science', 'sports', 'market', 'india', 'education']}
